@@ -45,6 +45,12 @@
         "projectId": "161d1423-df9c-4b57-a8d0-7a724140053e"
       }
     },
-    "owner": "sergebasangovs"
+    "owner": "sergebasangovs",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/161d1423-df9c-4b57-a8d0-7a724140053e"
+    }
   }
 }

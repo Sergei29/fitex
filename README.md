@@ -2,6 +2,20 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Publish an update
+
+```sh
+eas update --channel [channel-name] --message "[message]"
+```
+
+example:
+
+```sh
+eas update --channel development --message "my message for this update"
+```
+
+more at: https://docs.expo.dev/eas-update/getting-started/#publish-an-update
+
 ## Get started
 
 1. Install dependencies
