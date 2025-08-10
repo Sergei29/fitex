@@ -1,5 +1,6 @@
 import { Image } from "expo-image";
 import { Platform } from "react-native";
+import { Button } from "react-native-paper";
 
 import { Collapsible } from "@/components/Collapsible";
 import { ExternalLink } from "@/components/ExternalLink";
@@ -7,10 +8,10 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { IconSymbol } from "@/components/ui/IconSymbol";
-import { useTheme } from "@/lib/theme";
+import { useTheme } from "@/providers/ThemeProvider";
 
 export default function TabTwoScreen() {
-  const { tw } = useTheme();
+  const { tw, isDark, toggleTheme } = useTheme();
 
   return (
     <ParallaxScrollView
@@ -24,8 +25,18 @@ export default function TabTwoScreen() {
         />
       }
     >
-      <ThemedView style={tw`flex-row items-center gap-2`}>
+      <ThemedView style={tw` items-center gap-2`}>
         <ThemedText type="title">Explore</ThemedText>
+        <Button
+          icon={isDark ? "white-balance-sunny" : "moon-waxing-crescent"}
+          dark={isDark}
+          mode="contained"
+          onPress={() => {
+            toggleTheme();
+          }}
+        >
+          switch to {isDark ? "light" : "dark"} mode
+        </Button>
       </ThemedView>
       <ThemedText>
         This app includes example code to help you get started.

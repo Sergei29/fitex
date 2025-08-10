@@ -1,5 +1,4 @@
 // theme.ts
-import { useColorScheme } from "@/hooks/useColorScheme";
 import { MD3DarkTheme, MD3LightTheme } from "react-native-paper";
 import { create } from "twrnc";
 
@@ -65,14 +64,4 @@ export const paperThemeDark = {
     ...MD3DarkTheme.colors,
     ...darkColors,
   },
-};
-
-export const useTheme = () => {
-  const colorScheme = useColorScheme();
-  const paperTheme = colorScheme === "dark" ? paperThemeDark : paperThemeLight;
-
-  return {
-    paperTheme,
-    tw: colorScheme === "dark" ? twDark : twLight,
-  };
 };

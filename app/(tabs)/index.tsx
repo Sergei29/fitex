@@ -1,14 +1,14 @@
 import { Image } from "expo-image";
 import { Platform } from "react-native";
+import { Button } from "react-native-paper";
 
-import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useTheme } from "@/lib/theme";
+import { useTheme } from "@/providers/ThemeProvider";
 
 export default function HomeScreen() {
-  const { tw } = useTheme();
+  const { tw, toggleTheme, isDark } = useTheme();
 
   return (
     <ParallaxScrollView
@@ -20,9 +20,18 @@ export default function HomeScreen() {
         />
       }
     >
-      <ThemedView style={tw`flex-row items-center gap-2 mb-4`}>
+      <ThemedView style={tw`items-center gap-2 mb-4`}>
         <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+        <Button
+          icon={isDark ? "white-balance-sunny" : "moon-waxing-crescent"}
+          dark={isDark}
+          mode="contained"
+          onPress={() => {
+            toggleTheme();
+          }}
+        >
+          switch to {isDark ? "light" : "dark"} mode
+        </Button>
       </ThemedView>
       <ThemedView style={tw`gap-2 mb-2`}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>

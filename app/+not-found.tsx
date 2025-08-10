@@ -2,7 +2,7 @@ import { Link, Stack } from "expo-router";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useTheme } from "@/lib/theme";
+import { useTheme } from "@/providers/ThemeProvider";
 
 const NotFoundScreen = () => {
   const { tw } = useTheme();
