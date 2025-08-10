@@ -1,10 +1,11 @@
 import { Link, Stack } from 'expo-router';
-import tw from 'twrnc';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useTheme } from '@/lib/theme';
 
-export default function NotFoundScreen() {
+const NotFoundScreen = () => {
+  const { tw } = useTheme();
   return (
     <>
       <Stack.Screen options={{ title: 'Oops!' }} />
@@ -17,4 +18,6 @@ export default function NotFoundScreen() {
     </>
   );
 }
+
+export default NotFoundScreen;
 

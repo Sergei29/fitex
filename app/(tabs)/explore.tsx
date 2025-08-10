@@ -1,6 +1,5 @@
 import { Image } from 'expo-image';
 import { Platform } from 'react-native';
-import tw from 'twrnc';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -8,8 +7,11 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { useTheme } from '@/lib/theme';
 
 export default function TabTwoScreen() {
+  const { tw } = useTheme();
+  
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}

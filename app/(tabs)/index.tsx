@@ -1,13 +1,15 @@
 import { Image } from 'expo-image';
 import { Platform } from 'react-native';
-import tw from 'twrnc';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { useTheme } from '@/lib/theme';
 
 export default function HomeScreen() {
+  const { tw } = useTheme();
+  
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
