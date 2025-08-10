@@ -1,24 +1,24 @@
 // theme.ts
-import { useColorScheme } from '@/hooks/useColorScheme';
-import { MD3DarkTheme, MD3LightTheme } from 'react-native-paper';
-import { create } from 'twrnc';
+import { useColorScheme } from "@/hooks/useColorScheme";
+import { MD3DarkTheme, MD3LightTheme } from "react-native-paper";
+import { create } from "twrnc";
 
 // 🎨 Light theme colors
 const lightColors = {
-  primary: '#2563eb',    // blue-600
-  secondary: '#9333ea',  // purple-600
-  background: '#f9fafb', // gray-50
-  surface: '#ffffff',    // white
-  text: '#111827',       // gray-900
+  primary: "#2563eb", // blue-600
+  secondary: "#9333ea", // purple-600
+  background: "#f9fafb", // gray-50
+  surface: "#ffffff", // white
+  text: "#111827", // gray-900
 };
 
 // 🎨 Dark theme colors
 const darkColors = {
-  primary: '#60a5fa',    // blue-400
-  secondary: '#c084fc',  // purple-400
-  background: '#0f172a', // slate-900
-  surface: '#1e293b',    // slate-800
-  text: '#f1f5f9',       // slate-100
+  primary: "#60a5fa", // blue-400
+  secondary: "#c084fc", // purple-400
+  background: "#0f172a", // slate-900
+  surface: "#1e293b", // slate-800
+  text: "#f1f5f9", // slate-100
 };
 
 // 🌀 Tailwind instances
@@ -69,10 +69,10 @@ export const paperThemeDark = {
 
 export const useTheme = () => {
   const colorScheme = useColorScheme();
-const paperTheme = colorScheme === 'dark' ? paperThemeDark : paperThemeLight
+  const paperTheme = colorScheme === "dark" ? paperThemeDark : paperThemeLight;
 
   return {
     paperTheme,
-    tw: colorScheme === 'dark' ? twDark : twLight,
+    tw: colorScheme === "dark" ? twDark : twLight,
   };
 };

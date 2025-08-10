@@ -1,17 +1,16 @@
-
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import { Provider as PaperProvider } from 'react-native-paper';
-import 'react-native-reanimated';
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { Provider as PaperProvider } from "react-native-paper";
+import "react-native-reanimated";
 
 import { useTheme } from "@/lib/theme";
 
 const RootLayout = () => {
-  const {paperTheme} = useTheme();
-  
+  const { paperTheme } = useTheme();
+
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
 
   if (!loaded) {
@@ -28,6 +27,6 @@ const RootLayout = () => {
       <StatusBar style="auto" />
     </PaperProvider>
   );
-}
+};
 
 export default RootLayout;

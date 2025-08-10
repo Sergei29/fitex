@@ -1,0 +1,9 @@
+dist/
+.expo
+expo-env.d.ts
+node_modules
+package-lock.json
+public
+.vscode
+.env
+.eslintrc.json
