@@ -1,5 +1,7 @@
 # Welcome to your Expo app 👋
 
+- to fix and upgrade Expo project: https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Publish an update
